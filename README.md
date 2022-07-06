@@ -5,7 +5,7 @@ Cloud native applications benefit from Microservices architecture. By decouple b
 ## Micro front end
 A microfront end is a client side architecture, where each component is responsible only for one sub-domain of the business. A common shell is used to load the components.
 
-## Features
+## Features 
 List of key features of a micro-front end architecture.
 - Owned by one team - One team owns one or more micro-frontends. The team is responsible for the module instead of an individual.
 - Shared state management - Make sure that your micro app is not containing a data store state, it has to be separated into a shareable data layer. 
@@ -13,11 +13,36 @@ List of key features of a micro-front end architecture.
 - Decouple Components (Shared UI Library**) - The components should not have any direct interaction. 
 - Fault Tolerance -  If one of the micro-app is broken, the other will still be functioning
 
-## Angular 
-- Monorepo - Angular provides a way to set up one workspace with multiple projects and libraries sharing the same dependencies across all projects. 
-- NX CLI - Nx is a smart, fast and extensible build system with first class monorepo support and powerful integrations.
-- Module Federation (Webpack)
+## Angular / Nx concepts 
+It is important to understand below concepts before moving forward and understanding Microfront end architecture using Angular / NX
 
+### Monorepo
+
+Angular provides a way to set up one workspace with multiple projects and libraries sharing the same dependencies across all projects. 
+
+<img src="./images/1.jpeg">
+
+Alternatives: BIT.dev, lerna.js.org, Git Sub modules 
+
+### NX CLI
+
+How do you run a monorepo subproject? [NX](https://nx.dev/) is a smart, fast and extensible build system with first class monorepo support and powerful integrations. NX provides several npm run scripts to run each project and do other things.
+
+### Module Federation (Webpack 5)
+
+#### Problems with SPA
+-  Builds can become unacceptably slow (Webpack assume that the entire program code is available when compiling.)
+-  Long dev-server startup times
+-  Splitting the SPA into multiple projects leads to 
+   -  Cognitive overhead 
+   -  Coordinating build and deployment
+   -  Version-Mismatch-Hell 
+   -  Sharing state
+#### Solution
+- Module Federation provides a solution to the scaling problem by allowing a Single Page Application (SPA) to be sliced into multiple smaller remote applications that are built independently and that are not yet known at compile time.
+- Module federation allows a JavaScript application to dynamically load code from another application 
+- Federated code can always load its dependencies but will attempt to use the consumers’ dependencies before downloading more payload. 
+- 
 
 
 ** Important
