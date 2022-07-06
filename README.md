@@ -2,7 +2,7 @@
 
 Cloud native applications benefit from Microservices architecture. By decouple business domains we are able to independently scale, reduce friction, increase fault tolerance and solve many problems associated with monolithic architectures. However, the UI Applications still follow monolithic architecture, covering the entire sub-domain. Can we apply the same to Monolithic UI Applications ? The answer is yes. This repo is created to consolidate guiding principles for building micro-front ends. Although it is not limited to any particular framework like Angular, React or Vue, this repo contains sample code for building microfront ends using Angular.  
 
-## Micro front end
+## Micro frontend (MF)
 A microfront end is a client side architecture, where each component is responsible only for one sub-domain of the business. A common shell is used to load the components.
 
 ## Features 
@@ -42,8 +42,10 @@ How do you run a monorepo subproject? [NX](https://nx.dev/) is a smart, fast and
 - Module Federation provides a solution to the scaling problem by allowing a Single Page Application (SPA) to be sliced into multiple smaller remote applications that are built independently and that are not yet known at compile time.
 - Module federation allows a JavaScript application to dynamically load code from another application 
 - Federated code can always load its dependencies but will attempt to use the consumers’ dependencies before downloading more payload. 
-- 
 
+#### Dynamic Module Federation.
+
+Dynamic Module Federation allows you to build once and deploy everywhere, across environments. 
 
 ** Important
 - [Speculation] Angular 14 may support Microfront ends 
