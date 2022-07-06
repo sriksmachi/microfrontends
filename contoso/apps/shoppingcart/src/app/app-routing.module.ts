@@ -4,7 +4,7 @@ import { RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
   {
-    path: 'microfrontend',
+    path: 'inventory',
     loadChildren: () => loadRemoteModule({
       remoteEntry: 'http://localhost:3000/remoteEntry.js',
       type: 'module',
