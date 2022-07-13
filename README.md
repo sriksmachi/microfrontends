@@ -66,9 +66,10 @@ Module federation is:
 - Remote load: These applications can be built, deployed independently and are not yet known at compile time. 
 - Optimized: Federated code can always load its dependencies but will attempt to use the consumers’ dependencies before downloading more payload. 
 
-#### Dynamic Module Federation.
+#### Staic vs Dynamic Module Federation.
 
-Dynamic Module Federation allows you to build once and deploy everywhere, across environments. 
+Static module federation loads the remote meta config. during compile time to infer the remote components.
+Dynamic Module Federation allows you to load the remote meta config during runtime or shell creation time. Put in another words, the remote modules to include in shell can be decided when the shell is served. 
 
 ## Further Reading
 - https://itnext.io/how-micro-frontend-changes-the-future-of-angular-bb4deb2cfdad
